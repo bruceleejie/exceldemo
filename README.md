@@ -5,6 +5,7 @@ a demo of exporting excel file
 > 还参考了github上PanJiaChen/vue-element-admin的excel模块的相关代码。
 
 > 本人在Export2Excel.js文件中新增了适合自己的方法，可以给大家伙借鉴。
+> 如果看到的朋友想借鉴，请根据实际情况下载参考。
 
 这是我项目中需要用到excel文件导出功能，在这里做个小总结。
 
