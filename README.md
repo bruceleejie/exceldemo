@@ -28,4 +28,9 @@ a demo of exporting excel file
 
 1、导入功能也需要在项目中先引入依赖：
 > npm install xlsx
+>
 > 在需要使用的vue页面引入：import XLSX from 'xlsx'
+
+2、对于属性结构的导入和导出：要么是在导入之后，对数据进行处理，要么是在导出的时候对数据处理，导出成用户想要的格式。
+
+3、树形结构的导入和导出需要用到递归算法。
