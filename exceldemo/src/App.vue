@@ -11,6 +11,15 @@
 					<el-menu-item index="1">
 						<router-link to="/exportexcel">excel导出</router-link>
 					</el-menu-item>
+					<el-menu-item index="2">
+						<router-link to="/importexcel">excel导入</router-link>
+					</el-menu-item>
+					<el-menu-item index="3">
+						<router-link to="/importorg">树形组织导入</router-link>
+					</el-menu-item>
+					<el-menu-item index="3">
+						<router-link to="/exportorg">树形组织导出</router-link>
+					</el-menu-item>
 				</el-menu>
 			</div>
 			<div class="mainContain">
@@ -41,9 +50,9 @@ export default {
 	width: 100%;
 	height: 100%;
 	position: relative;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;*/
   text-align: center;
   color: #2c3e50;
   /*margin-top: 60px;*/

@@ -51,7 +51,7 @@ export default {
 	  // console.log('这里打印一下数据', response)
 	  if (response.errno === DATA_OK) {
 	    this.building = response.data
-	    // console.log('显示我传递好的数据：', this.building)
+	     console.log('显示我传递好的数据：', this.building)
 	  }
 	  this.loading = false
   	}).catch(() => {
