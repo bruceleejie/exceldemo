@@ -22,6 +22,10 @@ a demo of exporting excel file
 
 4、这里导出功能可以做成更加复杂的，比如用户选择导出类型（csv、xlsx），用户可自定义文件名称等。
 
-> 20190517更新记
+> 20190517更新记。。。
 
 这次更新demo，自己根据公司业务新的实际需求又加了几个功能：excel导入功能，树形结构导入，树形结构导出。
+
+1、导入功能也需要在项目中先引入依赖：
+> npm install xlsx
+> 在需要使用的vue页面引入：import XLSX from 'xlsx'
