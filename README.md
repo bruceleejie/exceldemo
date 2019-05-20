@@ -1,6 +1,8 @@
 # exceldemo
 a demo of exporting excel file
 
+## 一、借鉴说明：
+
 > 需要声明的是：本demo并非本人独家原创，在网上借鉴了一些大佬的文章，谢谢相关的大佬。
 > 还参考了github上PanJiaChen/vue-element-admin的excel模块的相关代码。
 
@@ -9,6 +11,8 @@ a demo of exporting excel file
 > 如果看到的朋友想借鉴，请根据实际情况下载参考。
 
 这是我项目中需要用到excel文件导出功能，在这里做个小总结。
+
+## 二、开发说明：
 
 1、本demo是用vue+webpack+element框架搭建并开发的。想要在vue项目中使用excel导出功能，需要先引入几个依赖：
 
@@ -35,4 +39,10 @@ a demo of exporting excel file
 
 3、树形结构的导入和导出需要用到递归算法。（详细代码请看views中的orgImport.vue和orgExport.vue）
 
-## 重点是：依赖引入，数据的处理，算法的应用。
+## 三、重点
+
+依赖引入，数据的处理，算法的应用
+
+## 四、文件结构
+/excel 这个文件是我提供的一个excel文件的文件夹
+/exceldemo 这个文件是我的源代码，直接下载可运行
