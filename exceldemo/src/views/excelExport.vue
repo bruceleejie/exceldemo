@@ -4,6 +4,7 @@
 		<el-row class="panel-title">
 			<div class="fr">
 				<el-button type="primary" size="small" @click="exportData">导出为Excel</el-button>
+				<el-button type="primary" size="small" @click="exportExcelWithSheet">导出为Excel(多个sheet)</el-button>
 			</div>
 		</el-row>
 		<div class="tableContain">
@@ -31,7 +32,7 @@
 </template>
 
 <script>
-
+import { utils, writeFileSync } from 'xlsx'
 // 定义常量方便更改操作
 const DATA_OK = 0
 
@@ -43,7 +44,7 @@ export default {
       building: []
     }
   },
-  created () {
+  mounted () {
   	this.loading = true
   	this.$http.get('/api/building').then((response) => {
   	  // console.log('这里打印一下数据1', response)
@@ -75,6 +76,31 @@ export default {
         })
       })
   	},
+	exportExcelWithSheet () {
+		// 多个sheet的逻辑就是给每个ws对应上数据和唯一的sheet名，然后把每个ws都追加到wb创建的excel中，然后用writeFile写文件
+		let size = 10 // 每个sheet 10条
+		let sheetCount = Math.ceil(this.building.length / size) // 总共有多少个sheet
+		let wb = utils.book_new()
+		let ws = null
+		let map = {
+			id: 'ID', name: '名称', address: '地址', longitude: '经度', latitude: '纬度'
+		}
+		for (let i=0; i<sheetCount; i++) {
+			let tableList = this.building.slice(i*size, (i+1)*size)
+			let finalArr = []
+			tableList.forEach(item => {
+				let obj = {}
+				for(let key in item) {
+					obj[map[key]] = item[key]
+				}
+				finalArr.push(obj)
+			})
+			ws = utils.json_to_sheet(finalArr)
+			utils.book_append_sheet(wb, ws, `sheet${i+1}`)
+		}
+		// writeFileXLSX(wb, `ceshi.xlsx`) // 这个版本没有这个方法 可以用下面的方法代替
+		writeFileSync(wb, `ceshi.xlsx`)
+	},
     formatJson (filterVal, jsonData) {
       return jsonData.map(v => filterVal.map(j => v[j]))
     }

@@ -39,6 +39,10 @@ a demo of exporting excel file
 
 3、树形结构的导入和导出需要用到递归算法。（详细代码请看views中的orgImport.vue和orgExport.vue）
 
+> 20240622更新记录
+这次更新demo，增加了支持到处多个sheet的excel文件，具体介绍看exceldemo里的README文件；
+另外 这次更新也替换了sass依赖，node-sass依赖在npm install的时候总会报错！！！具体可以看package.json
+
 ## 三、重点
 
 依赖引入，数据的处理，算法的应用
