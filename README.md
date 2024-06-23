@@ -26,6 +26,7 @@ a demo of exporting excel file
 
 4、这里导出功能可以做成更加复杂的，比如用户选择导出类型（csv、xlsx），用户可自定义文件名称等。
 
+## 更新记录
 > 20190517更新记。。。
 
 这次更新demo，自己根据公司业务新的实际需求又加了几个功能：excel导入功能，树形结构导入，树形结构导出。
@@ -40,6 +41,7 @@ a demo of exporting excel file
 3、树形结构的导入和导出需要用到递归算法。（详细代码请看views中的orgImport.vue和orgExport.vue）
 
 > 20240622更新记录
+
 这次更新demo，增加了支持到处多个sheet的excel文件，具体介绍看exceldemo里的README文件；
 另外 这次更新也替换了sass依赖，node-sass依赖在npm install的时候总会报错！！！具体可以看package.json
 
