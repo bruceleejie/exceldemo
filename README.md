@@ -1,9 +1,9 @@
-# exceldemo
-a demo of exporting excel file
+# excel-example
+a example of exporting excel file
 
 ## 一、借鉴说明：
 
-> 需要声明的是：本demo并非本人独家原创，在网上借鉴了一些大佬的文章，谢谢相关的大佬。
+> 需要声明的是：本案例并非本人独家原创，在网上借鉴了一些大佬的文章，谢谢相关的大佬。
 > 还参考了github上PanJiaChen/vue-element-admin的excel模块的相关代码。
 
 > 本人在Export2Excel.js文件中新增了适合自己的方法，可以给大家伙借鉴。
@@ -14,7 +14,7 @@ a demo of exporting excel file
 
 ## 二、开发说明：
 
-1、本demo是用vue+webpack+element框架搭建并开发的。想要在vue项目中使用excel导出功能，需要先引入几个依赖：
+1、本例子是用vue+webpack+element框架搭建并开发的。想要在vue项目中使用excel导出功能，需要先引入几个依赖：
 
 > npm install -S file-saver xlsx // 这里安装了两个依赖
 > 
@@ -29,7 +29,7 @@ a demo of exporting excel file
 ## 更新记录
 > 20190517更新记。。。
 
-这次更新demo，自己根据公司业务新的实际需求又加了几个功能：excel导入功能，树形结构导入，树形结构导出。
+这次更新，自己根据公司业务新的实际需求又加了几个功能：excel导入功能，树形结构导入，树形结构导出。
 
 1、导入功能也需要在项目中先引入依赖：
 > npm install xlsx
@@ -42,7 +42,7 @@ a demo of exporting excel file
 
 > 20240622更新记录
 
-这次更新demo，增加了支持到处多个sheet的excel文件，具体介绍看exceldemo里的README文件；
+这次更新，增加了支持到处多个sheet的excel文件，具体介绍看exceldemo里的README文件；
 另外 这次更新也替换了sass依赖，node-sass依赖在npm install的时候总会报错！！！具体可以看package.json
 
 ## 三、重点
